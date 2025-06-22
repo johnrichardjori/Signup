@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer-box">
+      <img src="./assests/images/icon-success.svg" alt="success-image" />
+      <h1>Thanks for Subscribing!</h1>
+      <p>
+        A confirmation email has been sent to <span id="text-output"></span>.
+        please open it and click the button inside to confirm the subscription.
+      </p>
+
+      <button>Dismiss message</button>
+    </div>
+
+    <script>
+      const email = localStorage.getItem("userEmail");
+      document.getElementById("text-output").textContent = email;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+body {
+  background-color: #36384d;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-box {
+  height: 55vh;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+.text-area button {
+  padding: 8px;
+  margin: 5px;
+  width: fit-content;
+  color: #fff;
+  background-color: #232742;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.text-area input {
+  padding: 8px;
+  margin: 5px;
+  width: 192px;
+  border-radius: 5px;
+  border-style: none;
+  border: 1px solid black;
+}
+
+.outer-box img {
+  height: 90%;
+  padding: 10px 10px;
+}
+
+.outer-box .text-area img {
+  height: 25px;
+}
+
+.tick-img {
+  display: flex;
+
+  align-items: center;
+}

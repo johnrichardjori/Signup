@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer-box">
+      <div class="text-area">
+        <h2>Stay updated!</h2>
+        <p>Join 60,000+ product managers receiving monthly updates on</p>
+        <div class="tick-img">
+          <img src="assests\images\icon-success.svg" alt="icon-image" />
+          <span>Product discovery and building what matters</span>
+        </div>
+
+        <div class="tick-img">
+          <img src="assests\images\icon-success.svg" alt="icon-image" />
+          <span>Product discovery and building what matters</span>
+        </div>
+        <div class="tick-img">
+          <img src="assests\images\icon-success.svg" alt="icon-image" />
+          <span>Product discovery and building what matters</span>
+        </div>
+        <br />
+
+        <label for="email">Email address</label> <br />
+
+        <div class="btn-class">
+          <input type="email" name="email" id="email" /> <br />
+          <button onclick="saveEmail()">
+            Subscribe to monthly news latter
+          </button>
+        </div>
+      </div>
+      <div class="image-area">
+        <img
+          src="assests/images/illustration-sign-up-desktop.svg"
+          alt="image"
+        />
+      </div>
+    </div>
+    <script>
+      function saveEmail() {
+        const inputvalue = document.getElementById("email").value;
+
+        function testEmail(inputvalue) {
+          let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+          if (inputvalue.match(regex)) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        if (!inputvalue || !testEmail(inputvalue)) {
+          alert("Please enter a valid email address");
+          return;
+        }
+
+        localStorage.setItem("userEmail", inputvalue);
+        window.location.href = "index2.html";
+      }
+    </script>
+  </body>
+</html>
