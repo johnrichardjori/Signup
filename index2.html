@@ -9,18 +9,24 @@
   <body>
     <div class="outer-box">
       <img src="./assests/images/icon-success.svg" alt="success-image" />
-      <h1>Thanks for Subscribing!</h1>
-      <p>
+      <h1 class="thanks-for-sub">Thanks for Subscribing!</h1>
+      <p class="success-text">
         A confirmation email has been sent to <span id="text-output"></span>.
         please open it and click the button inside to confirm the subscription.
       </p>
 
-      <button>Dismiss message</button>
+      <button onclick="callBack()">Dismiss message</button>
     </div>
 
     <script>
       const email = localStorage.getItem("userEmail");
       document.getElementById("text-output").textContent = email;
+
+      function callBack() {
+        console.log("button clicked");
+        localStorage.removeItem("userEmail");
+        window.location.href = "index.html";
+      }
     </script>
   </body>
 </html>

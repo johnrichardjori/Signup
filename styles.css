@@ -4,9 +4,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Roboto, sans-serif;
 }
 
-.outer-box {
+.main {
   height: 55vh;
   width: fit-content;
   background-color: #fff;
@@ -15,7 +16,7 @@ body {
   display: flex;
 }
 
-.text-area button {
+.sign-up-form button {
   padding: 8px;
   margin: 5px;
   width: fit-content;
@@ -25,7 +26,7 @@ body {
   border-style: none;
 }
 
-.text-area input {
+.sign-up-form input {
   padding: 8px;
   margin: 5px;
   width: 192px;
@@ -34,12 +35,12 @@ body {
   border: 1px solid black;
 }
 
-.outer-box img {
+.main img {
   height: 90%;
   padding: 10px 10px;
 }
 
-.outer-box .text-area img {
+.main .sign-up-form img {
   height: 25px;
 }
 

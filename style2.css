@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Roboto, sans-serif;
 }
 .outer-box {
   height: 40vh;

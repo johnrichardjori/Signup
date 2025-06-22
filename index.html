@@ -7,8 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="outer-box">
-      <div class="text-area">
+    <div class="main">
+      <div class="sign-up-form">
         <h2>Stay updated!</h2>
         <p>Join 60,000+ product managers receiving monthly updates on</p>
         <div class="tick-img">
@@ -30,7 +30,8 @@
 
         <div class="btn-class">
           <input type="email" name="email" id="email" /> <br />
-          <button onclick="saveEmail()">
+          <em id="error-msg"></em> <br />
+          <button class="sub-btn" onclick="saveEmail()">
             Subscribe to monthly news latter
           </button>
         </div>
@@ -57,11 +58,14 @@
         }
 
         if (!inputvalue || !testEmail(inputvalue)) {
-          alert("Please enter a valid email address");
+          let value = "Valid email required";
+
+          document.getElementById("error-msg").textContent = value;
           return;
         }
 
         localStorage.setItem("userEmail", inputvalue);
+
         window.location.href = "index2.html";
       }
     </script>
