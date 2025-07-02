@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sign-up-form">
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            src="assests/images/illustration-sign-up-mobile.svg"
+          />
+          <img
+            src="./assests/images/illustration-sign-up-desktop.svg"
+            alt="Main visual"
+          />
+        </picture>
+
+        <h2>Stay updated!</h2>
+        <p>Join our newsletter to get:</p>
+        <ul>
+          <li>Product updates</li>
+          <li>Exclusive content</li>
+          <li>Early access to new features</li>
+        </ul>
+
+        <form id="subscribeForm">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="email@company.com" />
+          <em id="error" class="error-msg"></em>
+          <button type="submit" class="sub-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer">
+        <p>Attribution: <a href="https://crio.do" target="_blank">Crio</a></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

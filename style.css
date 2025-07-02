@@ -1,0 +1,82 @@
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.main {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up-form img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sign-up-form h2 {
+  margin-top: 1rem;
+}
+
+.sign-up-form ul {
+  padding-left: 1.2rem;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error-msg {
+  color: rgb(255, 99, 71);
+  font-style: italic;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sub-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thanks-for-sub {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-text {
+  margin: 1rem 0;
+}
+
+.dismiss-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+}
