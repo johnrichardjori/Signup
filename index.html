@@ -35,7 +35,7 @@
         <form id="subscribeForm">
           <label for="email">Email address</label>
           <input type="email" id="email" placeholder="email@company.com" />
-          <em id="error" class="error-msg"></em>
+          <em id="error" class="error-msg" aria-live="polite"></em>
           <button type="submit" class="sub-btn">Subscribe</button>
         </form>
       </div>
@@ -45,6 +45,30 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+      document
+        .getElementById("subscribeForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const emailInput = document.getElementById("email");
+          const errorMsg = document.getElementById("error");
+          const email = emailInput.value.trim();
+          const emailPattern =
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+          console.log("hello");
+
+          if (!emailInput || !emailPattern.test(email)) {
+            errorMsg.textContent = "Valid email required.";
+            emailInput.style.borderColor = "rgb(255, 99, 71)";
+            emailInput.style.color = "rgb(255, 99, 71)";
+            emailInput.style.backgroundColor = "rgba(255, 99, 71, 0.6)";
+          } else {
+            errorMsg.textContent = "";
+            localStorage.setItem("userEmail", email);
+            window.location.href = "success.html";
+          }
+        });
+    </script>
   </body>
 </html>
