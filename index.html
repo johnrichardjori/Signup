@@ -9,6 +9,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Roboto, sans-serif;
+      }
+
+      .error-msg {
+        color: rgb(255, 99, 71);
+        font-style: italic;
+        display: block;
+        margin-top: 4px;
+      }
+
+      input.invalid {
+        border-color: rgb(255, 99, 71);
+        color: rgb(255, 99, 71);
+        background-color: rgba(255, 99, 71, 0.6);
+      }
+    </style>
   </head>
   <body>
     <div class="main">
@@ -16,7 +34,7 @@
         <picture>
           <source
             media="(max-width: 600px)"
-            src="assests/images/illustration-sign-up-mobile.svg"
+            srcset="assests/images/illustration-sign-up-mobile.svg"
           />
           <img
             src="./assests/images/illustration-sign-up-desktop.svg"
@@ -50,21 +68,19 @@
         .getElementById("subscribeForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+
           const emailInput = document.getElementById("email");
           const errorMsg = document.getElementById("error");
           const email = emailInput.value.trim();
           const emailPattern =
             /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-          console.log("hello");
-
-          if (!emailInput || !emailPattern.test(email)) {
+          if (!emailPattern.test(email)) {
             errorMsg.textContent = "Valid email required.";
-            emailInput.style.borderColor = "rgb(255, 99, 71)";
-            emailInput.style.color = "rgb(255, 99, 71)";
-            emailInput.style.backgroundColor = "rgba(255, 99, 71, 0.6)";
+            emailInput.classList.add("invalid");
           } else {
             errorMsg.textContent = "";
+            emailInput.classList.remove("invalid");
             localStorage.setItem("userEmail", email);
             window.location.href = "success.html";
           }
